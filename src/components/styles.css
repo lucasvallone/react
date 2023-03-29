@@ -1,0 +1,13 @@
+.navbar{
+    background:rgb(18, 20, 24);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: rgb(8, 155, 200) solid 2px;
+}
+
+ul:hover{
+    color:rgb(8, 155, 200)
+
+}
