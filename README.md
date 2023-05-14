@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proyecto Final ReactJS (CoderHouse 2022)
 
-## Available Scripts
+Kyoto Games es un e-commerce de una tienda virtual de videojuegos. Para el desarrollo de la aplicación web, busque referencias de otros e-commerce con temática de videojuegos, tanto en estructura, funcionalidad y diseño.
 
-In the project directory, you can run:
+## Funcionalidades
+* La base de datos está hecha en Firebase
+* El deployment está hecho en Vercel
+* El stock está controlado. No se puede agregar al carrito más cantidad de la que tiene el stock de Firebase
+* Al realizar una compra, se genera una orden de compra en Firebase con el nombre "order"
 
-### `npm start`
+## Estado del proyecto
+El proyecto está en desarrollo, pero cuenta con los requisitos exigidos para la entrega final de Coderhouse. La idea es seguir trabajando en el proyecto e implementar las siguientes funcionalidades:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Stock real de productos
+* Diseño responsive, con tres resoluciones: mobile, tablet y desktop
+* Barra de búsqueda para hacer un filtro más preciso de productos
+* Posibilidad de agregar juegos a favoritos
+* Implementación de Back End
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Guia para la instalación
+### react-router-dom
+#### Se utilizo para hacer un DOM virtual
+```
+npm install react-router-dom@6
+```
+### react-icons
+#### Se utilizo para los iconos usados en la aplicacion web
+```
+npm install react-icons --save
+```
+### Firebase
+#### Se uso Firebase para la base de datos de la aplicacion web
+```
+npm install --save firebase
+```
+### toastify
+#### Para generar las notificaciones de la aplicacion, se uso toastify
+```
+npm install --save react-toastify
+```
 
-### `npm test`
+## Herramientas utilizadas
+* HTML
+* CSS
+* SASS (_con metodologia BEM_)
+* Javascript
+* ReactJS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Librerias utilizadas
+* [react-router-dom](https://reactrouter.com/)
+* [react-icons](https://react-icons.github.io/react-icons) 
+* [Firebase](https://firebase.google.com/)
+* [react-toastify](https://fkhadra.github.io/react-toastify/introduction)
+* [react](https://es.reactjs.org/) (_useState, useContext, createContext_)
 
-### `npm run build`
+------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ReactJS Final Proyect (CoderHouse 2022)
+Kyoto Games is an e-commerce which consists of a videogame virtual store. I applied various ideas regarding structure, functionality and design from other e-commerce concerning videogames for the development of the web application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionality
+* The database was made with Firebase
+* The deployment was made with Vercel
+* The stock is limited. The amount set on the stock of Firebase cannot be exceeded when adding elements to the cart
+* When purchasing, a purchase order named “order” is created on Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Status
+Even though the project is under development, it contains the necessary requirements for the final exam. The project is intended to keep being developed and therefore receive the following features:
 
-### `npm run eject`
+* Real stock of products
+* Responsive design, with three resolutions: mobile, tablet and desktop
+* Search bar to achieve a more accurate product filtering
+* Possibility of adding games to a “favorite” section
+* Implementation of Back End
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation Guide
+### react-router-dom
+#### It was implemented to create a virtual DOM
+```
+npm install react-router-dom@6
+```
+### react-icons
+#### It was implemented for the icons used on the web application
+```
+npm install react-icons –save
+```
+### Firebase
+#### Firebase was implemented for the web application’s database
+```
+npm install –save firebase
+```
+### Toastify
+#### Toastify was implemented to generate the application’s notifications
+```
+npm install –save react-toastify
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tools used
+* HTML
+* CSS
+* SASS (_with BEM methodology_)
+* Javascript
+* ReactJS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Libraries used
+* [react-router-dom](https://reactrouter.com/)
+* [react-icons](https://react-icons.github.io/react-icons) 
+* [Firebase](https://firebase.google.com/)
+* [react-toastify](https://fkhadra.github.io/react-toastify/introduction)
+* [react](https://es.reactjs.org/) (_useState, useContext, createContext_)

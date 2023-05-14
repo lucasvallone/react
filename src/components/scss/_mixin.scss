@@ -1,0 +1,39 @@
+//Shadow
+@mixin boxShadow {
+    box-shadow: 2px 2px 10px $shadowColor;
+}
+
+//Buttons
+@mixin countButtonStyle {
+    font-size: 2rem;
+    color: $main-color;
+    border: none;
+    padding: 1rem;
+    margin: 0rem;
+    border-radius: 0px;
+}
+
+@mixin buttonStyle {
+    transition: border 0.2s, color 0.2s, background-color 0.2s;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+    color: $main-color;
+    border: none;
+    font-size: 1rem;
+    border: 2px solid $main-color;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: $buttonBackgroundColor;
+}
+
+@mixin buttonStyleHover {
+    color: $buttonHoverColor;
+    background-color: $main-color;
+}
+
+@mixin buttonStyleActive {
+    color: $buttonActiveColor;
+    background-color: $buttonActiveBackground;
+    border: 2px solid $buttonColorActiveBorder;
+}

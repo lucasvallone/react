@@ -1,0 +1,720 @@
+//Cart.js
+.cartStyle 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem auto;
+    width: 600px;
+    height: 400px;
+
+    svg 
+    {
+        margin: 1rem;
+        width: 200px;
+        height: 200px;
+        color: white;
+    }
+
+    p 
+    {
+        font-size: 3rem;
+        color: white;
+    }
+}
+
+.btnGoIndex 
+{
+    @include buttonStyle;
+
+    &:hover 
+    {
+        @include buttonStyleHover;
+    }
+
+    &:active 
+    {
+        @include buttonStyleActive;
+    }
+}
+
+.inCart
+{
+    display:flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+
+    .inCart__products
+    {
+        width: 60%;
+        margin: 0rem 2rem;
+    }
+
+    .inCart__buttons
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        margin: 1rem auto;
+        padding: 1rem;
+        background-color: $menuCartBackgroundColor;
+        width: 40%;
+        height: max-content;
+        @include boxShadow;
+
+        p
+        {
+            font-size: 2rem;
+            color: $main-color;
+            font-weight: bold;
+
+            span
+            {
+                color: $menuCartPriceFontColor;
+            }
+        }
+
+        hr
+        {
+            border: 1px solid $main-color;
+            margin: 0rem 1rem;
+        }
+
+        .inCart__buttons--total
+        {
+            padding: 2rem;
+        }
+
+        .inCart__buttons--form
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3
+            {
+                color:$main-color;
+                font-size: 2rem;
+                padding: 1.5rem;
+            }
+
+            p
+            {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+            }
+
+            input
+            {
+                width: 80%;
+                background-color: $navbar-color;
+                color: $font-color;
+                border: 1px solid $main-color;
+                outline: none;
+                padding: 1rem;
+                font-size: 1.2rem;
+                
+            }
+        }
+
+        .inCart__buttons--buttons
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+}
+
+.itemInCart 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 900px;
+    height: 200px;
+    background-color: $itemInCartBackgroundColor;
+    height: max-content;
+    align-self: flex-start;
+    transition: border 0.2s;
+    border: 2px solid $itemInCartBorderColor;
+    @include boxShadow;
+
+    .itemInCart__details 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-self: flex-start;
+        margin-right: auto;
+        margin-left: 1rem;
+
+        h3 
+        {
+            color: $font-color;
+            font-size: 1.4rem;
+            padding: 0.3rem 1rem;
+
+            span 
+            {
+                color: $main-color;
+            }
+        }
+    }
+
+    img 
+    {
+        width: 14%;
+        object-fit: cover;
+        border: 2px solid $main-color;
+    }
+
+    button 
+    {
+        @include buttonStyle;
+        
+        &:hover 
+        {
+            @include buttonStyleHover;
+        }
+    
+        &:active 
+        {
+            @include buttonStyleActive;
+        }
+    }
+
+    &:hover 
+    {
+        border: 2px solid $main-color;
+    }
+}
+
+.btnBuy
+{
+    @include buttonStyle;
+    background-color: green;
+    color:white;
+    border: 2px solid white; 
+
+    &:hover
+    {
+        @include buttonStyleHover;
+        background-color: white;
+        color:green;
+        border: 2px solid white; 
+    }
+
+    &:active
+    {
+        @include buttonStyleActive;
+        background-color: black;
+        color:white;
+        border: 2px solid black; 
+    }
+}
+
+.btnBuyInProgress
+{
+    @include buttonStyle;
+    background-color: #1259c3;
+    color:white;
+    border: #1259c3; 
+    cursor: progress;
+    width: 31rem;
+}
+
+.btnClearCart 
+{
+    @include buttonStyle;
+    margin: 1rem 0rem;
+
+    &:hover 
+    {
+        @include buttonStyleHover;
+    }
+
+    &:active 
+    {
+        @include buttonStyleActive;
+    }
+}
+
+//CartWidget.js
+.cartWidget 
+{
+    display: flex;
+    align-items: center;
+    color: $cartWidgetFontColor;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+
+    p 
+    {
+        font-size: 1.5rem;
+    }
+
+    svg 
+    {
+        margin-right: 0.5rem;
+    }
+
+    &:hover 
+    {
+        color: $main-color;
+    }
+}
+
+//FooterLinks.js
+.footerLinks
+{
+    margin-bottom: 2rem;
+
+    svg
+    {
+        transition: color 0.2s, transform 0.2s;
+        height: 30px;
+        width: 30px;
+        margin: 0rem 2rem;
+        color: white;
+        transform: scale(1, 1) ease;
+
+        &:hover
+        {
+            color: $main-color;
+            transform: scale(1.3, 1.3);
+        }
+        
+        &:active
+        {
+            color: black;
+        }
+    }
+}
+
+//Item.js
+.itemListStyle 
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1rem;
+
+    .itemListStyle__item 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        width: 254px;
+        height: 480px;
+        background-color: $itemBackgroundColor;
+        border: 2px solid $itemBorderColor;
+        transform: scale(1, 1);
+        transition: transform 0.3s, border 0.3s;
+        cursor: pointer;
+        @include boxShadow;
+
+        .itemListStyle__item--title
+        {
+            font-size: 1.2rem;
+            margin: 0.5rem 1rem;
+            color: $font-color;
+        }
+
+        .itemListStyle__item--price
+        {
+            color: $main-color;
+            font-size: 2rem;
+        }
+
+        .itemListStyle__item--btnBuy
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            width: 100%;
+            background-color: $itemStockBackgroundColor;
+            color: $font-color;
+            
+
+            svg
+            {
+                margin-right: 5px;
+            }
+        }
+
+        img 
+        {
+            width: 250px;
+        }
+
+        &:hover 
+        {
+            transform: scale(1.02, 1.02);
+            border: 2px solid $main-color;
+
+            .itemListStyle__item--btnBuy
+            {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.gameFav
+{
+    position: fixed;
+}
+
+//ItemCount.js
+.counter 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0rem auto;
+    padding: 1rem;
+
+    p 
+    {
+        font-size: 1.5rem;
+        color: $countNumberColor;
+    }
+
+    .counter__stockDetail
+    {
+        padding: 1rem;
+    }
+
+    .counter__buttons 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid $main-color;
+        border-radius: 5px;
+        width: 90%;
+        margin: 1rem 0rem;
+        background-color: $navbar-color;
+
+        button 
+        {
+            @include buttonStyle;
+            margin: 0rem;
+            border-radius: 0;
+            border: none;
+
+            &:hover 
+            {
+                @include buttonStyleHover;
+                margin: 0rem;
+                border-radius: 0;
+                border: none;
+            }
+    
+            &:active 
+            {
+                @include buttonStyleActive;
+                margin: 0rem;
+                border-radius: 0;
+                border: none;
+            }
+        }
+    }
+
+    button
+    {
+        @include buttonStyle;
+
+        &:hover 
+        {
+            @include buttonStyleHover
+        }
+    
+        &:active 
+        {
+            @include buttonStyleActive
+        }
+    }
+}
+
+//ItemDetail.js
+.itemDetail 
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    width: 95%;
+    margin: 1rem auto;
+    color: $detailFontColor;
+    font-size: 1rem;
+
+    .itemDetail__image 
+    {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        height: 500px;
+
+        img 
+        {
+            width: 100%;
+            border: 2px solid $main-color;
+        }
+    }
+
+    .itemDetail__detail 
+    {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: left;
+        width: 60%;
+        padding: 2rem;
+        height: 500px;
+        margin: 1rem;
+
+        .itemDetail__detail--title 
+        {
+            font-size: 4rem;
+            font-weight: bold;
+            padding-bottom: 1rem;
+            color: $main-color;
+        }
+
+        .itemDetail__detail--price
+        {
+            font-size: 3rem;
+            color: $main-color;
+        }
+
+        span 
+        {
+            color: $main-color;
+        }
+
+        p 
+        {
+            font-size: 1.4rem;
+            padding: 1rem;
+        }
+    }
+
+    .itemDetail__buttons
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 500px;
+
+        span
+        {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.goCart 
+{
+    margin: 6.5rem;
+
+    a 
+    {
+        button 
+        {
+            @include buttonStyle;
+            width: 160px;
+
+            &:hover 
+            {
+                @include buttonStyleHover;
+            }
+    
+            &:active 
+            {
+                @include buttonStyleActive;
+            }
+        }
+    }
+}
+
+//Links.js
+.links 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.4rem;
+
+    li
+    {
+        border-bottom: none;
+    }
+
+    .active 
+    {
+        border-bottom: 2px solid $main-color;
+        color: $main-color;
+    }
+
+    a 
+    {
+        transition: color 0.2s;
+        text-decoration: none;
+        color: $font-color;
+        padding: 0.5rem;
+        margin: 0.5rem;
+
+        
+        &:hover 
+        {
+            color: $main-color;
+        }
+    }
+}
+
+//Loader.js
+.circleLoader 
+{
+    margin: 0rem auto;
+}
+
+//NavBar.js
+.navbar 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $navbar-color;
+    border-bottom: 1px solid $main-color;
+
+    .logo
+    {
+        width: 250px;
+        margin: 1rem;
+    }
+
+    ul 
+    {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: 1rem;
+    }
+
+    li 
+    {
+        margin: 0rem 0.5rem;
+    }
+}
+
+//SuccesBuy.js
+.succesBuy
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem auto;
+    height: 400px;
+
+    .succesBuy__rightSide
+    {
+        display: flex;
+        flex-direction: column;
+
+        .succesBuy__rightSide--message
+        {
+            margin: 2rem;
+
+            p 
+            {
+                font-size: 2.5rem;
+                color: white;
+            }
+        }
+        .succesBuy__rightSide--details
+        {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+            
+            h3
+            {
+                font-size: 2rem;
+                color: $main-color;
+                font-weight: 500;
+            }
+
+            p 
+            {
+                font-size: 1.5rem;
+                color: white;
+            }
+        }
+        .succesBuy__rightSide--button
+        {
+            button
+            {
+                margin: 1rem;
+            }
+        }
+        .succesBuy__rightSide--titleColor
+        {
+            color: $itemTitleDetailFontColor;
+        }
+    }
+
+    .succesBuy__productDetail
+    {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        padding: 1.5rem;
+
+        .succesBuy__productDetail--title
+        {
+            color: $main-color;
+            font-size: 2.2rem;
+            padding: 1rem;
+        }
+
+        .succesBuy__productDetail--detail
+        {
+            color: white;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            overflow: auto;
+
+            span
+            {
+                color: $itemTitleDetailFontColor;
+            }
+        }
+    }
+
+    svg 
+    {
+        margin: 1rem;
+        width: 200px;
+        height: 200px;
+        color: green;
+    }
+}

@@ -1,0 +1,16 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Roboto, sans-serif;
+}
+
+@import "variable";
+@import "colorMap";
+@import "mixin";
+@import "class";
+@import "tag";
+@import "id";
+@import "animation";
